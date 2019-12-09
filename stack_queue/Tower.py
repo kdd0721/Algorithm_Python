@@ -1,8 +1,15 @@
-heights = [6,9,5,7,4]
+#https://programmers.co.kr/learn/courses/30/lessons/42588
+heights = [5,4,3,2,1]
 answer = []
-for i in range(len(heights)-1,-1,-1):
-    if heights[i-1]>heights[i]:
-        answer.insert(i,i)
-    else:
-        answer.insert(i,0)
+
+#answer = [0] * len(heights)
+for i in range(0,len(heights)):
+    answer.append(0)
+
+for i in range(len(heights)-1,-1,-1):    
+    for j in range(i-1, -1, -1):
+        if heights[i] < heights[j]:
+            answer[i] = j + 1
+            break
+
 print(answer)
