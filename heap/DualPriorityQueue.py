@@ -9,7 +9,7 @@ def solution(operations):
         else: # case D
             if heap:
                 if arr[1]=='-1':
-                    'ssss',heapq.heappop(heap)
+                    heapq.heappop(heap)
                 else: # case D 1
                     heap.remove(max(heap))
     answer = []
