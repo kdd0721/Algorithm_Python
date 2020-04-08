@@ -1,3 +1,4 @@
+import unittest
 import heapq
 
 scoville = [1,2,3,9,10,12]
@@ -17,5 +18,13 @@ def solution(scoville, K):
         
     return answer
 
+class SolutionTests(unittest.TestCase):
+    def test_runs(self):
+        solution([1,2,3,9,10,12],7)
+    
+    def test(self):
+        self.assertEqual(solution([1,2,3,9,10,12],7),2)
+
 if __name__=="__main__":
+    unittest.main()
     print(solution(scoville, K))
